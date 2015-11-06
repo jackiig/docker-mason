@@ -85,13 +85,14 @@ RUN cpanm -qf \
 	Spreadsheet::WriteExcel::Big \
 	Sub::Import \
 	Template::Mustache \
+	Test::MockModule \
 	WebService::FogBugz \
 	WWW::Mailgun \
 	XML::Liberal \
 	&& rm -Rf $PERL_CPANM_HOME
 
 RUN mkdir -p /tmp/git/ && \
-	git clone https://github.com/jackiig/mailgun.perl.git \
+	git clone https://github.com/gtsafas/mailgun.perl.git \
 		/tmp/git/mailgun.perl \
 	&& cd /tmp/git/mailgun.perl \
 	&& perl Makefile.PL && make && make test && make install \
