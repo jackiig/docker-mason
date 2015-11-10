@@ -81,6 +81,7 @@ RUN cpanm -qf \
 	MasonX::Profiler \
 	Math::Currency \
 	Net::Braintree \
+	Params::Validate \
 	Spreadsheet::Write \
 	Spreadsheet::WriteExcel \
 	Spreadsheet::WriteExcel::Big \
