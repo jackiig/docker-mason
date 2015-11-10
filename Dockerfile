@@ -72,6 +72,7 @@ RUN cpanm -qf \
 	CAM::PDF \
 	Config::General \
 	Data::Dumper \
+	DateTime::Format::RFC3339 \
 	DBIx::Class \
 	DBIx::Class::Schema::Loader \
 	DBIx::Class::TimeStamp \
