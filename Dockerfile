@@ -13,6 +13,7 @@ RUN apt-get -qq update && \
 		libapache-dbi-perl \
 		libapache-dbilogger-perl \
 		libapache2-mod-apreq2 \
+		libapache2-mod-fcgid \
 		libapache2-mod-perl2 \
 		libapache2-mod-perl2-dev \
 		libapache2-request-perl \
@@ -63,6 +64,7 @@ RUN apt-get -qq update && \
 		python-lxml \
 		python-pip \
 		python-suds \
+		starman \
 	&& rm -rf /var/lib/apt/lists/*
 
 ## This puts cpanm's temp files into /tmp/cpanm:
@@ -70,6 +72,7 @@ ENV PERL_CPANM_HOME /tmp/cpanm
 RUN cpanm -qf \
 	AnyData \
 	CAM::PDF \
+	Catalyst::Devel \
 	Config::General \
 	Data::Dumper \
 	DateTime::Format::RFC3339 \
@@ -104,7 +107,7 @@ ADD . /usr/src/app/
 
 ## Enables prefork in Apache, copies in config and entry point, and sets up
 ##  v3's models.
-RUN a2dismod mpm_event && a2enmod mpm_prefork cgi \
+RUN a2dismod mpm_event && a2enmod mpm_prefork cgi fcgid \
 	&& mv /usr/src/app/mason-app.conf /etc/apache2/sites-enabled/000-default.conf \
 	&& chown -R www-data:www-data /usr/src/app/
 
