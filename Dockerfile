@@ -18,81 +18,83 @@ RUN apt-get -qq update && \
 		libapache2-mod-perl2-dev \
 		libapache2-request-perl \
 		libapreq2-dev \
-		libcache-memcached-fast-perl \
-		libcache-memcached-perl \
-		libcgi-simple-perl \
-		libclass-dbi-abstractsearch-perl \
-		libclass-dbi-mysql-perl \
-		libclass-dbi-pager-perl \
-		libconfig-tiny-perl \
-		libcrypt-ssleay-perl \
-		libdata-dumper-simple-perl \
-		libdata-guid-perl \
-		libdatetime-timezone-perl \
-		libdbd-mysql-perl \
-		libdigest-hmac-perl \
-		libemail-send-perl \
-		libemail-simple-perl \
-		libemail-valid-perl \
-		libfilesys-diskspace-perl \
-		libhtml-entities-numbered-perl \
-		libhtml-mason-perl \
-		libhtml-strip-perl \
-		libhttp-request-params-perl \
-		libmail-sender-perl \
-		libmasonx-request-withapachesession-perl \
-		libmime-base64-urlsafe-perl \
-		libmime-lite-perl \
-		libmime-types-perl \
-		libmodule-runtime-perl \
-		libnet-smtp-tls-perl \
-		libnet-smtps-perl \
-		libpdf-fdf-simple-perl \
-		libsoap-lite-perl \
-		libspreadsheet-writeexcel-perl \
-		libsql-abstract-perl \
-		libswitch-perl \
-		libtext-csv-perl \
-		libtext-textile-perl \
-		libtext-unaccent-perl \
-		libtry-tiny-perl \
-		libxml-libxml-perl \
-		libxml-simple-perl \
+		libxml2-dev \
 		pdftk \
-		perl-modules \
 		python \
 		python-lxml \
 		python-pip \
 		python-suds \
 		starman \
+		zlib1g-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 ## This puts cpanm's temp files into /tmp/cpanm:
 ENV PERL_CPANM_HOME /tmp/cpanm
 RUN cpanm -qf \
 	AnyData \
+	Cache::Memcached \
+	Cache::Memcached::Fast \
 	CAM::PDF \
 	Catalyst::Devel \
+	CGI::Simple \
+	Class::DBI::AbstractSearch \
+	Class::DBI::mysql \
+	Class::DBI::Pager \
 	Config::General \
+	Config::Tiny \
+	Crypt::SSLeay \
 	Data::Dumper \
+	Data::Dumper::Simple \
+	Data::GUID \
+	Date::Calc
 	DateTime::Format::RFC3339 \
+	DateTime::TimeZone \
+	DBD::mysql \
 	DBIx::Class \
 	DBIx::Class::Schema::Loader \
 	DBIx::Class::TimeStamp \
+	Digest::HMAC \
+	Email::Send \
 	Email::Send::Gmail \
+	Email::Simple \
+	Email::Valid \
 	Encoding::FixLatin \
+	Filesys::DiskSpace \
+	HTML::Entities::Numbered \
+	HTML::Mason \
+	HTML::Strip \
+	HTTP::Request::Params \
+	Mail::Sender \
 	MasonX::Profiler \
+	MasonX::Request::WithApacheSession \
 	Math::Currency \
+	MIME::Base64::URLSafe \
+	MIME::Lite \
+	MIME::Types \
+	Module::Runtime \
 	Net::Braintree \
+	Net::SMTP::TLS \
+	Net::SMTPS \
+	PDF::FDF::Simple \
+	SOAP::Lite \
 	Spreadsheet::Write \
 	Spreadsheet::WriteExcel \
+	Spreadsheet::WriteExcel \
 	Spreadsheet::WriteExcel::Big \
+	SQL::Abstract \
 	Sub::Import \
+	Switch \
 	Template::Mustache \
 	Test::MockModule \
+	Text::CSV \
+	Text::Textile \
+	Text::Unaccent \
+	Try::Tiny \
 	WebService::FogBugz \
 	WWW::Mailgun \
 	XML::Liberal \
+	XML::LibXML \
+	XML::Simple \
 	&& rm -Rf $PERL_CPANM_HOME
 
 RUN mkdir -p /tmp/git/ && \
