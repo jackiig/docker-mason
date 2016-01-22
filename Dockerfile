@@ -46,7 +46,7 @@ RUN cpanm -qf \
 	Data::Dumper \
 	Data::Dumper::Simple \
 	Data::GUID \
-	Date::Calc
+	Date::Calc \
 	DateTime::Format::RFC3339 \
 	DateTime::TimeZone \
 	DBD::mysql \
