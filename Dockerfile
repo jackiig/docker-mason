@@ -75,6 +75,7 @@ RUN cpanm -qf \
 	Net::Braintree \
 	Net::SMTP::TLS \
 	Net::SMTPS \
+	Params::Validate \
 	PDF::FDF::Simple \
 	SOAP::Lite \
 	Spreadsheet::Write \
