@@ -51,6 +51,7 @@ RUN cpanm -qf \
 	DateTime::TimeZone \
 	DBD::mysql \
 	DBIx::Class \
+	DBIx::Class \
 	DBIx::Class::Schema::Loader \
 	DBIx::Class::TimeStamp \
 	Digest::HMAC \
@@ -71,6 +72,7 @@ RUN cpanm -qf \
 	MIME::Base64::URLSafe \
 	MIME::Lite \
 	MIME::Types \
+	Mock::Quick \
 	Module::Runtime \
 	Net::Braintree \
 	Net::SMTP::TLS \
@@ -80,13 +82,14 @@ RUN cpanm -qf \
 	SOAP::Lite \
 	Spreadsheet::Write \
 	Spreadsheet::WriteExcel \
-	Spreadsheet::WriteExcel \
 	Spreadsheet::WriteExcel::Big \
 	SQL::Abstract \
 	Sub::Import \
+	Sub::Name \
 	Switch \
 	Template::Mustache \
 	Test::MockModule \
+	Test::WWW::Mechanize \
 	Text::CSV \
 	Text::Textile \
 	Text::Unaccent \
