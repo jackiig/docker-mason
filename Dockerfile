@@ -35,6 +35,7 @@ RUN cpanm -qf \
 	Cache::Memcached \
 	Cache::Memcached::Fast \
 	CAM::PDF \
+	Catalyst::Controller::HTML::FormFu \
 	Catalyst::Devel \
 	Catalyst::View::TT \
 	CGI::Simple \
