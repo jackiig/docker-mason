@@ -36,6 +36,7 @@ RUN cpanm -qf \
 	Cache::Memcached::Fast \
 	CAM::PDF \
 	Catalyst::Devel \
+	Catalyst::View::TT \
 	CGI::Simple \
 	Class::DBI::AbstractSearch \
 	Class::DBI::mysql \
@@ -79,6 +80,7 @@ RUN cpanm -qf \
 	Net::SMTPS \
 	Params::Validate \
 	PDF::FDF::Simple \
+	Plack::I18N \
 	SOAP::Lite \
 	Spreadsheet::Write \
 	Spreadsheet::WriteExcel \
