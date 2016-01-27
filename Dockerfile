@@ -37,6 +37,7 @@ RUN cpanm -qf \
 	CAM::PDF \
 	Catalyst::Controller::HTML::FormFu \
 	Catalyst::Devel \
+	Catalyst::Model::DBIC::Schema \
 	Catalyst::View::TT \
 	CGI::Simple \
 	Class::DBI::AbstractSearch \
