@@ -93,6 +93,7 @@ RUN cpanm -qf \
 	Switch \
 	Template::Mustache \
 	Test::MockModule \
+	Test::Pod::Coverage \
 	Test::WWW::Mechanize \
 	Text::CSV \
 	Text::Textile \
