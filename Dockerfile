@@ -38,6 +38,8 @@ RUN cpanm -qf \
 	Catalyst::Controller::HTML::FormFu \
 	Catalyst::Devel \
 	Catalyst::Model::DBIC::Schema \
+	Catalyst::View::Email \
+	Catalyst::View::Email::Template \
 	Catalyst::View::TT \
 	CGI::Simple \
 	Class::DBI::AbstractSearch \
