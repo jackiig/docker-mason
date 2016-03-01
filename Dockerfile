@@ -38,6 +38,8 @@ RUN cpanm -qf \
 	Catalyst::Controller::HTML::FormFu \
 	Catalyst::Devel \
 	Catalyst::Model::DBIC::Schema \
+	Catalyst::Plugin::I18N \
+	Catalyst::Plugin::I18N::PathPrefix \
 	Catalyst::View::Email \
 	Catalyst::View::Email::Template \
 	Catalyst::View::TT \
@@ -79,6 +81,7 @@ RUN cpanm -qf \
 	MIME::Types \
 	Mock::Quick \
 	Module::Runtime \
+	MooseX::ClassAttribute \
 	Net::Braintree \
 	Net::SMTP::TLS \
 	Net::SMTPS \
@@ -100,6 +103,7 @@ RUN cpanm -qf \
 	Text::CSV \
 	Text::Textile \
 	Text::Unaccent \
+	Time::HiRes \
 	Try::Tiny \
 	WebService::FogBugz \
 	WWW::Mailgun \
