@@ -75,6 +75,7 @@ RUN cpanm -qf \
 	Mail::Sender \
 	MasonX::Profiler \
 	MasonX::Request::WithApacheSession \
+	match::smart \
 	Math::Currency \
 	MIME::Base64::URLSafe \
 	MIME::Lite \
