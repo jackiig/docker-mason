@@ -107,14 +107,13 @@ RUN cpanm -qf \
 	Time::HiRes \
 	Try::Tiny \
 	WebService::FogBugz \
-	WWW::Mailgun \
 	XML::Liberal \
 	XML::LibXML \
 	XML::Simple \
 	&& rm -Rf $PERL_CPANM_HOME
 
 RUN mkdir -p /tmp/git/ && \
-	git clone https://github.com/gtsafas/mailgun.perl.git \
+	git clone https://github.com/jackiig/mailgun.perl.git \
 		/tmp/git/mailgun.perl \
 	&& cd /tmp/git/mailgun.perl \
 	&& perl Makefile.PL && make && make test && make install \
