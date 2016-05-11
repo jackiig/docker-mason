@@ -94,6 +94,7 @@ RUN cpanm -qf \
 	Spreadsheet::WriteExcel \
 	Spreadsheet::WriteExcel::Big \
 	SQL::Abstract \
+	String::Util \
 	Sub::Import \
 	Sub::Name \
 	Switch \
