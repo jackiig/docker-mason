@@ -1,4 +1,0 @@
-web:
-  image: jackiig/html-mason
-  ports:
-    - "80:80"

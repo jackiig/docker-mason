@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+  web:
+    build: .
+    restart: always
+    ports:
+      - "${PORT}:5000"
+    volumes:
+      - ./:/usr/src/app/
