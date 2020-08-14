@@ -20,17 +20,16 @@ RUN apt-get -qq update && \
 
 ## This puts cpanm's temp files into /tmp/cpanm:
 ENV PERL_CPANM_HOME /tmp/cpanm
-RUN cpanm -qf Carton Module::CPANfile \
-	&& rm -Rf $PERL_CPANM_HOME
-
 WORKDIR /usr/src/app/
 COPY cpanfile cpanfile.snapshot /usr/src/app/
-RUN carton install
+RUN cpanm -qf --installdeps . \
+	&& rm -Rf $PERL_CPANM_HOME
 
 ## Enables prefork in Apache, copies in config and entry point, and sets up
 ##  Mason's directories.
 COPY mason-app.conf /etc/apache2/sites-enabled/000-default.conf
 RUN a2enmod cgi fcgid \
+	&& rm /etc/apache2/ports.conf \
 	&& mkdir -p /etc/apache2/mason/ \
 	&& chown -R www-data:www-data /etc/apache2/mason/ /usr/src/app/
 
