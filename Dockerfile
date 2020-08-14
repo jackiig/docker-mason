@@ -30,7 +30,7 @@ RUN carton install
 ## Enables prefork in Apache, copies in config and entry point, and sets up
 ##  Mason's directories.
 COPY mason-app.conf /etc/apache2/sites-enabled/000-default.conf
-RUN a2dismod mpm_event && a2enmod mpm_prefork cgi fcgid \
+RUN a2enmod cgi fcgid \
 	&& mkdir -p /etc/apache2/mason/ \
 	&& chown -R www-data:www-data /etc/apache2/mason/ /usr/src/app/
 
